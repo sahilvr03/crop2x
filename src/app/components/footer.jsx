@@ -133,7 +133,7 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm text-gray-500">
                 <Phone className="w-4 h-4 text-green-600" />
-                <span>+92 300 1234567</span>
+                <span>+92 346 7666791</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-500">
                 <Mail className="w-4 h-4 text-green-600" />
@@ -141,7 +141,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-500">
                 <MapPin className="w-4 h-4 text-green-600" />
-                <span>Lahore, Punjab, Pakistan</span>
+                <span>karachi, Sindh, Pakistan</span>
               </div>
             </div>
           </div>
