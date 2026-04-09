@@ -13,33 +13,46 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = async () => {
+  // ✅ Fixed: added `e` parameter + real API call
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Replace with actual API endpoint
-    alert("Message sent! We will get back to you within 24 hours.");
-    
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setErrorMsg("");
+
+    try {
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        // Show first validation error if available
+        const msg = data.errors?.[0]?.msg || data.error || "Something went wrong.";
+        setErrorMsg(msg);
+        return;
+      }
+
+      // ✅ Success
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 4000);
+
+    } catch (err) {
+      setErrorMsg("Could not connect to server. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactMethods = [
     { icon: Phone, label: "Phone", value: "+92 300 1234567", href: "tel:+923001234567", detail: "Mon-Fri, 9am-6pm PST" },
     { icon: Mail, label: "Email", value: "info@crop2x.com", href: "mailto:info@crop2x.com", detail: "Response within 24h" },
-    { icon: MapPin, label: "Address", value: "Lahore, Punjab, Pakistan", href: "#", detail: "Main office, by appointment" },
+    { icon: MapPin, label: "Address", value: "Room # 001, ICCBS Technology Incubator and Industrial Park Center 2, Industrial Linkages Building, International Center for Chemical and Biological Sciences, University Of Karachi, Karachi, Karachi City, Sindh", href: "#", detail: "Main office, by appointment" },
   ];
 
   const supportOptions = [
@@ -103,7 +116,6 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              {/* Contact Methods */}
               <div className="space-y-5">
                 {contactMethods.map((method) => (
                   <a
@@ -123,7 +135,6 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* Trust Badge */}
               <div className="bg-green-50 rounded-xl p-5 text-center">
                 <CheckCircle className="w-8 h-8 text-green-600 mx-auto mb-2" />
                 <p className="text-sm font-medium text-gray-800">Trusted by 500+ farms</p>
@@ -216,6 +227,13 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Error Message */}
+                {errorMsg && (
+                  <p className="text-red-500 text-sm text-center bg-red-50 rounded-lg py-2 px-4">
+                    ✗ {errorMsg}
+                  </p>
+                )}
+
                 {/* Submit Button */}
                 <button
                   type="submit"
@@ -243,7 +261,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* MAP SECTION (Optional) */}
+      {/* MAP SECTION */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -251,11 +269,10 @@ export default function ContactPage() {
             <p className="text-gray-600">Visit our head office (by appointment)</p>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-80 bg-gray-100 flex items-center justify-center">
-            {/* Replace with actual Google Maps embed or static image */}
             <div className="text-center text-gray-400">
               <MapPin className="w-12 h-12 mx-auto mb-2 text-green-600" />
               <p className="text-sm">Interactive Map Preview</p>
-              <p className="text-xs">Lahore, Punjab, Pakistan</p>
+              <p className="text-xs">University of Karachi, Sindh, Pakistan</p>
             </div>
           </div>
         </div>

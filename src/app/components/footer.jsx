@@ -141,7 +141,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-500">
                 <MapPin className="w-4 h-4 text-green-600" />
-                <span>karachi, Sindh, Pakistan</span>
+                <span>Room # 001, ICCBS Technology Incubator and Industrial Park Center 2, Industrial Linkages Building, International Center for Chemical and Biological Sciences, University Of Karachi, Karachi, Karachi City, Sindh
+</span>
               </div>
             </div>
           </div>
