@@ -8,20 +8,15 @@ import {
   Home, Info, Layers, Package, Briefcase, BarChart2,
   BookOpen, Users, MessageSquare
 } from "lucide-react";
-
+import Crop2xLogo from "@/../public/assets/crop2x-logo.png"; 
+import Image from "next/image";
 // ─── Mega-menu data ──────────────────────────────────────────────────────────
 
 const megaMenus = {
   Home: {
     icon: Home,
     sections: [
-      {
-        title: "Overview",
-        items: [
-          { name: "Ecosystem Overview", href: "/", desc: "Our full agri-tech platform" },
-          { name: "Hero / Introduction", href: "/", desc: "What Crop2X stands for" },
-        ],
-      },
+      
       {
         title: "Quick Links",
         items: [
@@ -273,13 +268,8 @@ export default function Header() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group shrink-0">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-green-600 to-emerald-500 flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
-            <Leaf className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-xl font-bold tracking-tight">
-            <span className="text-gray-900">Crop</span>
-            <span className="text-green-600">2X</span>
-          </span>
+        
+        <Image src={Crop2xLogo} alt="Crop2X Logo" className="w-40" />
         </Link>
 
         {/* Desktop Nav */}

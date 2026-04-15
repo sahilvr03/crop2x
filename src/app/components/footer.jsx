@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { Leaf, Mail, Phone, MapPin,  Send } from "lucide-react";
-
+import Crop2xLogo from "@/../public/assets/crop2x-logo.png"; 
+import Image from "next/image";
 const footerLinks = {
   company: [
     { name: "About Us", href: "/pages/About" },
@@ -44,13 +45,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-green-600 to-emerald-500 flex items-center justify-center shadow-md group-hover:shadow-lg transition-all">
-                <Leaf className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold tracking-tight">
-                <span className="text-gray-900">Crop</span>
-                <span className="text-green-600">2X</span>
-              </span>
+             <Image src={Crop2xLogo} alt="Crop2X Logo" className="w-40" />
             </Link>
             <p className="text-gray-500 text-sm mb-4 leading-relaxed">
               Precision agriculture ecosystem — IoT sensors, satellite intelligence, and AI insights for modern farming.
@@ -131,16 +126,16 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Get in Touch</h3>
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm text-gray-500">
+              <div className="flex items-center gap-2 text-sm text-gray-500 hover:animate-bounce hover:cursor-pointer">
                 <Phone className="w-4 h-4 text-green-600" />
                 <span>+92 346 7666791</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-500">
+              <div className="flex items-center gap-2 text-sm text-gray-500 hover:animate-bounce hover:cursor-pointer">
                 <Mail className="w-4 h-4 text-green-600" />
                 <span>info@crop2x.com</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-500">
-                <MapPin className="w-4 h-4 text-green-600" />
+              <div className="flex items-center gap-2 text-sm text-gray-500 hover:animate-bounce hover:cursor-pointer">
+                <MapPin className="w-8 h-8 text-green-600" />
                 <span>Room # 001, ICCBS Technology Incubator and Industrial Park Center 2, Industrial Linkages Building, International Center for Chemical and Biological Sciences, University Of Karachi, Karachi, Karachi City, Sindh
 </span>
               </div>
