@@ -143,33 +143,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Stay Updated</h3>
-            <p className="text-sm text-gray-500 mb-3">
-              Get the latest insights and product updates.
-            </p>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Thanks for subscribing! (Demo)");
-              }}
-              className="flex flex-col sm:flex-row gap-2"
-            >
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 px-4 py-2 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
-                required
-              />
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-xl hover:bg-green-700 transition-colors"
-              >
-                <Send className="w-4 h-4" />
-                Subscribe
-              </button>
-            </form>
-          </div>
+    
         </div>
 
         {/* Copyright */}

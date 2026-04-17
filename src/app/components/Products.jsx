@@ -49,7 +49,7 @@ function Products() {
 
           <div className="text-center mt-12">
             <Link
-              href="/products"
+              href="/pages/Products"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-xl border-2 border-green-600 text-green-700 font-semibold hover:bg-green-600 hover:text-white transition-all duration-300"
             >
               View All Products <ArrowRight size={18} />

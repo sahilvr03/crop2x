@@ -6,14 +6,16 @@ import TelenorLogo from '@/../public/assets/telenor-logo-white.png'
 import GSMAlogo from '@/../public/assets/gsma-logo.png'
 import IClogo from '@/../public/assets/ic-logo.png'
 import SmartCityLabLogo from '@/../public/assets/smart-city-logo.png'
+import P1 from '@/../public/assets/p1.png'
+import P2 from '@/../public/assets/p2.png'
+import P3 from '@/../public/assets/p3.png'
+import P4 from '@/../public/assets/p4.png'
+import P5 from '@/../public/assets/p5.png'
+import P6 from '@/../public/assets/p6.png'
 function TrustedPartners() {
   // Partner logos data
 const partners = [
-  {
-    id: 1,
-    name: "Telenor Pakistan",
-    logo: TelenorLogo
-  },
+
   {
     id: 2,
     name: "GSMA",
@@ -21,14 +23,38 @@ const partners = [
   },
   {
     id: 3,
-    name: "National Incubation Center",
-    logo: IClogo
+    name: "dalda",
+    logo: P1
   },
    {
     id: 4,
     name: "Smart City Lab",
     logo: SmartCityLabLogo
-  }
+  },
+  {
+    id: 5,
+    name: "Ir Farms",
+    logo: P2
+  },
+  {
+    id: 6,
+    name: "Telenor Pakistan ",
+    logo: P3
+  },
+  {
+    id: 7,
+    name: "Pakistan Agriculture Research (PAR) ",
+    logo: P6},
+  {
+    id: 8,
+    name: "ORI ",
+    logo: P4
+  },
+  { id: 9,
+    name: "Agro Focus",    logo: P5
+  },
+
+  
 ];
 
   // Duplicate partners for seamless loop
@@ -86,13 +112,13 @@ const partners = [
 
             <div className="flex flex-wrap justify-center gap-5">
               <Link
-                href="/contact"
+                href="/pages/Contact"
                 className="group px-8 py-4 bg-white text-green-800 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2"
               >
                 Request Demo <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/contact"
+                href="/pages/Contact"
                 className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300"
               >
                 Partner With Us

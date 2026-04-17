@@ -256,25 +256,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* CTA NEWSLETTER */}
-      <section className="py-16 bg-green-700 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h3 className="text-2xl md:text-3xl font-bold mb-3">Stay Updated</h3>
-          <p className="text-green-100 mb-6 max-w-md mx-auto">
-            Get the latest insights and resources delivered to your inbox.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 px-4 py-3 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button className="px-6 py-3 bg-white text-green-700 rounded-xl font-semibold hover:bg-gray-100 transition">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
+  
     </>
   );
 }

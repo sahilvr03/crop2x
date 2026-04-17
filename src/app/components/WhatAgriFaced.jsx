@@ -312,21 +312,7 @@ export default function WhatAgriFaced() {
             ))}
           </div>
 
-          {/* CTA row */}
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/pages/Contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-white rounded-xl font-semibold hover:scale-105 transition-all shadow-md shadow-green-200"
-            >
-              Request Demo <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/pages/Solutions"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 text-gray-700 rounded-xl font-semibold hover:bg-gray-50 hover:border-green-300 transition-all"
-            >
-              Explore Solutions
-            </Link>
-          </div>
+       
         </div>
 
       </div>

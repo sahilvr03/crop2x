@@ -41,12 +41,7 @@ function WeOffer() {
       <span className="text-sm font-medium text-green-700 bg-green-50 px-4 py-2 rounded-full">
         {solution.stat}
       </span>
-      <Link 
-        href="/solutions" 
-        className="text-green-600 hover:text-green-800 transition-colors font-medium"
-      >
-        Learn More →
-      </Link>
+
     </div>
   </div>
 ))}

@@ -60,14 +60,14 @@ export default function HomePage() {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/contact"
+                href="/pages/Contact"
                 className="group px-8 py-4 bg-gradient-to-r  from-green-600 to-emerald-600 rounded-xl font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 hover:scale-105"
               >
                 Request Demo <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
 
               <Link
-                href="/about"
+                href="/pages/About"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl font-semibold flex items-center gap-2 hover:bg-white/20 transition-all duration-300"
               >
                 <Play size={18} /> Explore More

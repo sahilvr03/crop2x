@@ -8,7 +8,7 @@ const products = [
   {
     name: "Crop2X Sensor Probes",
     tagline: "Eyes in the Soil",
-    desc: "Advanced multi-parameter soil monitoring probes measuring moisture, temperature, pH, EC, and nutrients in real-time.",
+    desc: "Advanced multi-parameter soil monitoring probes measuring moisture, temperature, pH and EC",
     specs: ["6+ soil parameters", "Solar powered", "Cellular connectivity", "IP67 rated", "2-year battery"],
     icon: Cpu,
     image: "/assets/sensor-probe.png",

@@ -139,6 +139,8 @@ const megaMenus = {
         items: [
           { name: "Measurable Stats", href: "/pages/Impact", desc: "Yield, water, cost savings" },
           { name: "Case Studies", href: "/pages/dropdownpages/casestudy", desc: "Real farm success stories" },
+          { name: "Testimonials", href: "/pages/dropdownpages/testimonials", desc: "What our customers say" },
+
         ],
       },
       {
@@ -192,20 +194,7 @@ const megaMenus = {
   Contact: {
     icon: MessageSquare,
     sections: [
-      {
-        title: "Get in Touch",
-        items: [
-          { name: "Contact Form", href: "/pages/Contact", desc: "Send us a message" },
-          { name: "Request Demo", href: "/pages/Contact", desc: "See the platform live" },
-        ],
-      },
-      {
-        title: "Work Together",
-        items: [
-          { name: "Partner With Us", href: "/pages/Contact", desc: "Grow with Crop2X" },
-          { name: "Support / Helpdesk", href: "/pages/Contact", desc: "Technical assistance" },
-        ],
-      },
+      
     ],
   },
 };
@@ -218,8 +207,8 @@ const navLinks = [
   { name: "Services",  href: "/pages/Services", dropdown: true },
   { name: "Impact",    href: "/pages/Impact",    dropdown: true },
   { name: "Resources", href: "/pages/Resources", dropdown: true },
-  { name: "Partners",  href: "/pages/Contact",   dropdown: true },
-  { name: "Contact",   href: "/pages/Contact",   dropdown: true },
+  { name: "Contact",   href: "/pages/Contact",   dropdown: false },
+  { name: "Pricing",   href: "/pages/Pricing",   dropdown: false },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
