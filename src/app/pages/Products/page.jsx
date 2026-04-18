@@ -6,31 +6,31 @@ import { ArrowRight, CheckCircle, Sparkles, Cpu, CloudSun, Satellite, Droplet, T
 
 const products = [
   {
-    name: "Crop2X Sensor Probes",
-    tagline: "Eyes in the Soil",
-    desc: "Advanced multi-parameter soil monitoring probes measuring moisture, temperature, pH and EC",
+    name: "AquaSave Pro",
+    tagline: "Smart IoT Soil Monitoring",
+    desc: "Advanced multi-parameter IoT sensor measuring soil moisture, temperature, pH, and EC for precision irrigation.",
     specs: ["6+ soil parameters", "Solar powered", "Cellular connectivity", "IP67 rated", "2-year battery"],
     icon: Cpu,
     image: "/assets/sensor-probe.png",
     color: "from-green-600 to-emerald-500",
   },
   {
-    name: "Weather Tracker",
-    tagline: "Hyper-Local Weather Intelligence",
-    desc: "Micro weather stations providing field-level data like temperature, humidity, rainfall, wind, and pressure.",
-    specs: ["8 parameters", "Solar powered", "5-min intervals", "Alerts", "API integration"],
-    icon: CloudSun,
-    image: "/assets/weather-tracker.png",
-    color: "from-blue-600 to-cyan-500",
-  },
-  {
-    name: "Satellite Intelligence Platform",
-    tagline: "Farm Insights from Space",
-    desc: "Ag5X AI platform delivering NDVI, crop health maps, stress detection, and yield predictions.",
+    name: "Ag5x",
+    tagline: "Satellite-Powered Crop Intelligence",
+    desc: "AI-driven crop monitoring platform providing NDVI, crop health maps, stress detection, and yield predictions.",
     specs: ["NDVI", "Stress detection", "Historical data", "Yield prediction", "Dashboard"],
     icon: Satellite,
     image: "/assets/satellite-platform.jpg",
     color: "from-purple-600 to-indigo-500",
+  },
+  {
+    name: "FaaS",
+    tagline: "Farming as a Service",
+    desc: "Intelligent crop advisory platform delivering actionable insights, recommendations, and alerts for better farm decisions.",
+    specs: ["Crop advisory", "Disease alerts", "Irrigation planning", "Fertilizer guidance", "Multilingual support"],
+    icon: CloudSun,
+    image: "/assets/weather-tracker.png",
+    color: "from-blue-600 to-cyan-500",
   },
 ];
 

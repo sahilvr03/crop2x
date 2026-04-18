@@ -12,6 +12,11 @@ import P3 from '@/../public/assets/p3.png'
 import P4 from '@/../public/assets/p4.png'
 import P5 from '@/../public/assets/p5.png'
 import P6 from '@/../public/assets/p6.png'
+import C1 from '@/../public/assets/c1.png'
+import C2 from '@/../public/assets/c2.png'
+import C3 from '@/../public/assets/c3.png'
+import C4 from '@/../public/assets/c4.png'
+import C5 from '@/../public/assets/c5.png'
 function TrustedPartners() {
   // Partner logos data
 const partners = [
@@ -53,6 +58,38 @@ const partners = [
   { id: 9,
     name: "Agro Focus",    logo: P5
   },
+
+  
+];
+
+const acceleration = [
+
+  {
+    id: 2,
+    name: "GSMA",
+    logo: C1
+  },
+  {
+    id: 3,
+    name: "dalda",
+    logo: C2
+  },
+   {
+    id: 4,
+    name: "Smart City Lab",
+    logo: C3
+  },
+  {
+    id: 5,
+    name: "Ir Farms",
+    logo: C4
+  },
+  {
+    id: 6,
+    name: "Telenor Pakistan ",
+    logo: C5
+  },
+ 
 
   
 ];
@@ -109,6 +146,43 @@ const partners = [
                 </div>
               </div>
             </div>
+            {/* PARTNERS & ASPIRATIONS SECTION */}
+<section className="py-24 ">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    
+    {/* Heading */}
+    <div className="text-center max-w-3xl mx-auto mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        Backed By & Recognized By
+      </h2>
+      <p className="text-lg text-green-100">
+        Supported by leading accelerators and award platforms driving innovation in agriculture and technology.
+      </p>
+    </div>
+
+    {/* Logos Layout (Centered + Balanced for 5 logos) */}
+<div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+  {acceleration.map((item) => (
+    <div key={item.id} className="group flex flex-col items-center">
+
+      <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/10 hover:bg-white/20 transition">
+        <Image
+          src={item.logo}
+          alt={item.name}
+          width={140}
+          height={80}
+          className="object-contain opacity-80 group-hover:opacity-100 transition"
+        />
+      </div>
+
+      <p className="text-sm text-green-100 mt-3 text-center">
+        {item.name}
+      </p>
+    </div>
+  ))}
+</div>
+  </div>
+</section>
 
             <div className="flex flex-wrap justify-center gap-5">
               <Link
