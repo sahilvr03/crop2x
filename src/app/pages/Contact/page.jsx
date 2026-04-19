@@ -64,11 +64,22 @@ export default function ContactPage() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-700 via-green-800 to-emerald-900" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-30" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+<section className="relative py-24 md:py-32 overflow-hidden">
+  
+  <div className="absolute inset-0">
+    <img
+      src="/assets/contact.png" // 👈 yahan ek wide farm + sunrise / data vibe image use karo
+      alt="Agriculture Impact"
+      className="w-full h-full object-cover scale-105"
+    />
+  </div>
+
+  {/* Overlay (thoda strong for contrast) */}
+  <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80" />
+
+
+  {/* Content */}
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
           <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
             <Sparkles className="w-4 h-4 text-green-300" />
             <span className="text-sm font-medium tracking-wide">Get in Touch</span>
@@ -80,7 +91,8 @@ export default function ContactPage() {
             Ready to transform your farm? Our team is here to help with demos, partnerships, and support.
           </p>
         </div>
-      </section>
+</section>
+
 
       {/* SUPPORT HIGHLIGHTS */}
       <section className="py-12 bg-white border-b border-gray-100">
@@ -288,7 +300,7 @@ export default function ContactPage() {
             className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 rounded-xl hover:bg-green-700 transition"
           >
             <Phone size={16} />
-            Call +92 300 1234567
+            Call +92 346 7666791
           </a>
         </div>
       </section>

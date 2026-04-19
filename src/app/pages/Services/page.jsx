@@ -113,25 +113,40 @@ export default function ServicesPage() {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────────────────── */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-700 via-green-800 to-emerald-900" />
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-            <Sparkles className="w-4 h-4 text-green-300" />
-            <span className="text-sm font-medium tracking-wide">Expert Farm Services</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">Our Services</h1>
-          <p className="text-lg md:text-xl text-green-100 max-w-3xl mx-auto">
-            From real-time soil intelligence to on-ground agronomic visits — every service is designed to help your farm thrive smarter, not harder.
-          </p>
-        </div>
-      </section>
+<section className="relative py-24 md:py-32 overflow-hidden">
+  
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <img
+      src="/assets/services.png" // 👈 jo image abhi generate hui hai usay yahan save karo
+      alt="Farm Services"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  {/* Overlay for readability */}
+  <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
+
+  {/* Content */}
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+    
+    <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+      <Sparkles className="w-4 h-4 text-green-300" />
+      <span className="text-sm font-medium tracking-wide">
+        Expert Farm Services
+      </span>
+    </div>
+
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+      Our Services
+    </h1>
+
+    <p className="text-lg md:text-xl text-green-100 max-w-3xl mx-auto">
+      From real-time soil intelligence to on-ground agronomic visits — every service is designed to help your farm thrive smarter, not harder.
+    </p>
+
+  </div>
+</section>
 
       {/* ── SERVICES GRID ─────────────────────────────────────────────────────── */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">

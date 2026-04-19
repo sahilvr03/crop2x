@@ -124,26 +124,35 @@ export default function AboutPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-700 via-green-800 to-emerald-900" />
-        <div className="absolute inset-0 opacity-30 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%3E%3Cg%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z%22/%3E%3C/g%3E%3C/svg%3E')]" />
+<section className="relative py-24 md:py-32 overflow-hidden">
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <img
+      src="/assets/about.jpg" // 👈 apni image ka path yahan do
+      alt="Agriculture Background"
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-        <div className="container mx-auto px-6 text-center text-white relative z-10">
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/10 border border-white/20">
-            <Sparkles className="w-4 h-4 text-green-300" />
-            <span className="text-sm">About Crop2X</span>
-          </div>
+  {/* Optional Dark Overlay (better readability) */}
+  <div className="absolute inset-0 bg-black/50" />
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Transforming Agriculture Through Technology and Expertise
-          </h1>
+  {/* Content */}
+  <div className="container mx-auto px-6 text-center text-white relative z-10">
+    <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/10 border border-white/20">
+      <Sparkles className="w-4 h-4 text-green-300" />
+      <span className="text-sm">About Crop2X</span>
+    </div>
 
-          <p className="text-lg md:text-xl text-green-100 max-w-3xl mx-auto">
-            Crop2X empowers farmers, agribusinesses, and governments with AI-driven insights, IoT solutions, and expert advisory — creating a climate-resilient, high-yield agriculture ecosystem in Pakistan.
-          </p>
-        </div>
-      </section>
+    <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      Transforming Agriculture Through Technology and Expertise
+    </h1>
 
+    <p className="text-lg md:text-xl text-green-100 max-w-3xl mx-auto">
+      Crop2X empowers farmers, agribusinesses, and governments with AI-driven insights, IoT solutions, and expert advisory — creating a climate-resilient, high-yield agriculture ecosystem in Pakistan.
+    </p>
+  </div>
+</section>
  {/* STATS */}
 <section className="py-16 bg-gradient-to-b from-white to-gray-50">
   <div className="max-w-7xl mx-auto px-6">
