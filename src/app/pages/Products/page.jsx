@@ -171,27 +171,6 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* COMPARISON / CTA SECTION */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 md:p-12 text-center shadow-sm">
-            <Leaf className="w-12 h-12 text-green-600 mx-auto mb-4" />
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              Not sure which product fits your farm?
-            </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-              Our agronomy experts will help you design the perfect solution tailored to your crops, climate, and goals.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all hover:scale-105"
-            >
-              Talk to an Expert <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* FOOTER CTA (optional, but adds consistency) */}
       <section className="py-16 bg-gray-900 text-white text-center">
         <div className="container mx-auto px-4">

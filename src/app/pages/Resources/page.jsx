@@ -257,15 +257,7 @@ export default function ResourcesPage() {
             ))}
           </div>
 
-          <div className="text-center mt-10">
-            <p className="text-gray-600 mb-4">Still have questions?</p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all hover:scale-105"
-            >
-              Contact Support <ArrowRight size={16} />
-            </Link>
-          </div>
+       
         </div>
       </section>
 

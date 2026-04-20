@@ -273,22 +273,31 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* MAP SECTION */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900">Our Location</h3>
-            <p className="text-gray-600">Visit our head office (by appointment)</p>
-          </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-80 bg-gray-100 flex items-center justify-center">
-            <div className="text-center text-gray-400">
-              <MapPin className="w-12 h-12 mx-auto mb-2 text-green-600" />
-              <p className="text-sm">Interactive Map Preview</p>
-              <p className="text-xs">University of Karachi, Sindh, Pakistan</p>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* MAP SECTION */}
+{/* MAP SECTION */}
+<section className="py-16 bg-white">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div className="text-center mb-8">
+      <h3 className="text-2xl font-bold text-gray-900">Our Location</h3>
+      <p className="text-gray-600">Visit our head office (by appointment)</p>
+    </div>
+
+    <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-80">
+      <iframe
+        title="ICCBS Location Map"
+        src="https://www.google.com/maps?q=ICCBS%20Technology%20Incubator%20and%20Industrial%20Park%20Center%202%2C%20University%20of%20Karachi%2C%20Karachi&output=embed"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        loading="lazy"
+        allowFullScreen=""
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </div>
+
+  </div>
+</section>
 
       {/* CTA BANNER */}
       <section className="py-16 bg-gray-900 text-white text-center">
