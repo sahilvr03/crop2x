@@ -158,7 +158,7 @@ const megaMenus = {
       {
         title: "Learn",
         items: [
-          { name: "Blog & Articles", href: "/pages/Resources", desc: "AgriTech insights" },
+          { name: "Blog & Articles", href: "/pages/dropdownpages/blogs", desc: "AgriTech insights" },
           { name: "Whitepapers & Research", href: "/pages/Resources", desc: "Deep-dive publications" },
           { name: "Guides & eBooks", href: "/pages/Resources", desc: "Practical farming guides" },
         ],

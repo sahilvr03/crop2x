@@ -164,7 +164,7 @@ export default function PricingPage() {
     />
   </div>
 
-  {/* Overlay (thoda strong for contrast) */}
+  {/* Overlay (thoda strong for contrast) */} 
   <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80" />
 
   {/* Pattern (optional, rakhna ho to) */}
