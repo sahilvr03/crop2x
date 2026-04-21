@@ -13,7 +13,7 @@ export default function BlogPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/assets/blog.jpg"
+            src="/assets/blogs/bg-blog.avif"
             alt="Blog Background"
             className="w-full h-full object-cover"
           />

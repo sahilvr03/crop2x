@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle, Sparkles, Cpu, CloudSun, Satellite, Droplet, Thermometer, Wind, BarChart3, Leaf } from "lucide-react";
+import { ArrowRight, CheckCircle, Sparkles, Cpu, CloudSun,CloudRain,Smartphone,Drone,Package, Satellite, Droplet, Thermometer, Wind, BarChart3, Leaf } from "lucide-react";
 
 const products = [
   {
@@ -11,7 +11,7 @@ const products = [
     desc: "Advanced multi-parameter IoT sensor measuring soil moisture, temperature, pH, and EC for precision irrigation.",
     specs: ["6+ soil parameters", "Solar powered", "Cellular connectivity", "IP67 rated", "2-year battery"],
     icon: Cpu,
-    image: "/assets/sensor-probe.png",
+    image: "/sensorprob2.png",
     color: "from-green-600 to-emerald-500",
   },
   {
@@ -20,7 +20,7 @@ const products = [
     desc: "AI-driven crop monitoring platform providing NDVI, crop health maps, stress detection, and yield predictions.",
     specs: ["NDVI", "Stress detection", "Historical data", "Yield prediction", "Dashboard"],
     icon: Satellite,
-    image: "/assets/satellite-platform.jpg",
+    image: "/assets/agri.png",
     color: "from-purple-600 to-indigo-500",
   },
   {
@@ -29,9 +29,40 @@ const products = [
     desc: "Intelligent crop advisory platform delivering actionable insights, recommendations, and alerts for better farm decisions.",
     specs: ["Crop advisory", "Disease alerts", "Irrigation planning", "Fertilizer guidance", "Multilingual support"],
     icon: CloudSun,
-    image: "/assets/weather-tracker.png",
+    image: "/app1.png",
     color: "from-blue-600 to-cyan-500",
   },
+
+  // NEW PRODUCTS
+
+  {
+    name: "Crop2X Weather Station",
+    tagline: "Hyperlocal Climate Intelligence",
+    desc: "Smart weather station providing real-time field-level data including temperature, humidity, rainfall, and wind conditions to optimize farming decisions.",
+    specs: ["Real-time weather data", "Rainfall tracking", "Wind speed & direction", "Humidity & temperature", "Cloud connectivity"],
+    icon: CloudRain,
+    image: "/assets/weather-station.png",
+    color: "from-sky-600 to-blue-500",
+  },
+  {
+    name: "Crop2X Mobile Device",
+    tagline: "Field Data in Your Hands",
+    desc: "Portable smart device enabling farmers to monitor crops, capture field data, and receive instant AI-powered insights directly from the farm.",
+    specs: ["Portable device", "Real-time sync", "AI insights", "Offline mode", "User-friendly interface"],
+    icon: Smartphone,
+    image: "/sensorprob1.png",
+    color: "from-indigo-600 to-blue-400",
+  },
+  {
+    name: "Crop2X Drone Imagery",
+    tagline: "Precision Aerial Crop Monitoring",
+    desc: "High-resolution drone imaging services delivering detailed crop health analysis, stress mapping, and field variability insights.",
+    specs: ["High-res imagery", "NDVI maps", "Field analysis", "Stress detection", "Survey reports"],
+    icon: Drone,
+    image: "/assets/product.png",
+    color: "from-gray-700 to-slate-500",
+  },
+
 ];
 
 const features = [
@@ -112,7 +143,7 @@ export default function ProductsPage() {
                     alt={product.name}
                     width={400}
                     height={300}
-                    className="max-h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="h-full w-auto rounded-md object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Icon badge */}
                   <div className={`absolute top-4 right-4 w-10 h-10 rounded-xl bg-gradient-to-br ${product.color} text-white flex items-center justify-center shadow-md`}>
@@ -151,7 +182,7 @@ export default function ProductsPage() {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-wrap gap-4 pt-4">
+                {/* <div className="flex flex-wrap gap-4 pt-4">
                   <Link
                     href="/contact"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
@@ -164,7 +195,7 @@ export default function ProductsPage() {
                   >
                     View Use Cases
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

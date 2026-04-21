@@ -4,12 +4,13 @@ export const blogs = [
     title:
       "Crop2x Represents Pakistan at GSMA Innovation Fund Asia Bootcamp 2025 in Singapore",
     date: "June 23, 2025",
-    cover: "/blog1/main.jpg",
+    cover: "/assets/blogs/singapore-main.jpg",
     images: [
-      "/blog1/1.jpg",
-      "/blog1/2.jpg",
-      "/blog1/3.jpg",
-      "/blog1/4.jpg",
+      "/assets/blogs/singapore-1.jpg",
+      "/assets/blogs/singapore-2.jpeg",
+      "/assets/blogs/singapore-3.jpeg",
+      "/assets/blogs/singapore-4.jpeg",
+      "/assets/blogs/singapore-5.jpg",
     ],
     content: `
 Singapore | May 2025 — Crop2x had the honor of representing Pakistan at the GSMA Innovation Fund Asia Bootcamp 2025 in Singapore.
@@ -36,7 +37,7 @@ We return with new insights and partnerships to scale faster.
     slug: "investing-in-women-farmers",
     title: "Investing in Women Farmers: Unlocking Pakistan’s Potential",
     date: "March 24, 2025",
-    cover: "/blog2/main.jpg",
+    cover: "/assets/blogs/women-empowerment.jpg",
     images: [],
     content: `
 Women play a critical role in Pakistan’s agricultural sector, yet they remain underrepresented.
@@ -67,7 +68,7 @@ Investing in women farmers is essential for Pakistan’s future.
     slug: "wheat-farmers-climate-change",
     title: "Pakistan’s Wheat Farmers Face Rising Costs Amid Climate Change",
     date: "November 29, 2024",
-    cover: "/blog3/main.jpg",
+    cover: "/assets/blogs/wheat-farmer.jpg",
     images: [],
     content: `
 Wheat is a staple crop in Pakistan but faces threats from rising temperatures.
@@ -102,7 +103,7 @@ Collaboration between farmers, researchers, and policymakers is critical.
     slug: "crop2x-telenor-partnership",
     title: "Crop2X and Telenor Pakistan Partner to Revolutionize Agriculture",
     date: "October 24, 2024",
-    cover: "/blog4/main.jpg",
+    cover: "/assets/blogs/telenor-mou.jpeg",
     images: [],
     content: `
 Crop2X partnered with Telenor Pakistan to bring digital agriculture solutions to farmers.
@@ -131,7 +132,7 @@ The future of agriculture lies in precision farming and data-driven decisions.
     slug: "smart-agriculture-pakistan",
     title: "Smart Agriculture: A Call to Nurturing the Future of Pakistan",
     date: "September 8, 2024",
-    cover: "/blog5/main.jpg",
+    cover: "/assets/blogs/smart-agriculture.jpg",
     images: [],
     content: `
 Agriculture is the backbone of Pakistan’s economy.
@@ -169,7 +170,7 @@ Smart agriculture is key to food security and economic growth.
     title:
       "Crop2X Making Waves Globally at the GSMA Innovation Fund Bootcamp Asia 2024",
     date: "August 29, 2024",
-    cover: "/blog6/main.jpg",
+    cover: "/assets/blogs/innovation-fund.jpg",
     images: [],
     content: `
 Crop2X participated in GSMA Bootcamp Asia 2024 in Jakarta.
@@ -195,7 +196,7 @@ It reinforced the importance of innovation in agriculture.
     title:
       "Optimizing Crop Yield through Remote Sensing: Improving Food Security",
     date: "February 6, 2023",
-    cover: "/blog7/main.jpg",
+    cover: "/assets/blogs/smart-agriculture.jpg",
     images: [],
     content: `
 Remote sensing is transforming agriculture.
@@ -220,7 +221,7 @@ Remote sensing is essential for sustainable agriculture.
     slug: "agriculture-startups-pakistan",
     title: "The Necessity of Agriculture Startups in Pakistan",
     date: "February 6, 2023",
-    cover: "/blog8/main.jpg",
+    cover: "/assets/blogs/ag-startup.jpg",
     images: [],
     content: `
 Agriculture contributes significantly to Pakistan’s GDP.
@@ -248,7 +249,7 @@ Agritech startups like Crop2x are transforming the sector.
     title:
       "Crop2x and Artistic Milliners Collaboration on Promoting Organic Growth",
     date: "December 5, 2022",
-    cover: "/blog9/main.jpg",
+    cover: "/assets/blogs/organic-growth.jpeg",
     images: [],
     content: `
 Farmers face challenges like pests, weather, and soil degradation.
