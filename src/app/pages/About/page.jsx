@@ -15,39 +15,27 @@ import {
   BarChart3,
   CheckCircle,
 } from "lucide-react";
-
-
 import { useEffect, useState } from "react";
 
 function CountUp({ end, duration = 3200, suffix = "" }) {
   const [count, setCount] = useState(0);
-
   useEffect(() => {
     let startTime;
     let frame;
-
     const finalValue = parseInt(String(end).replace(/\D/g, ""));
-
     const animate = (time) => {
       if (!startTime) startTime = time;
-
       const progress = Math.min((time - startTime) / duration, 1);
       const current = Math.floor(progress * finalValue);
-
       setCount(current);
-
-      if (progress < 1) {
-        frame = requestAnimationFrame(animate);
-      }
+      if (progress < 1) frame = requestAnimationFrame(animate);
     };
-
     frame = requestAnimationFrame(animate);
-
     return () => cancelAnimationFrame(frame);
   }, [end, duration]);
-
   return <span>{count}{suffix}</span>;
 }
+
 /* ================= DATA ================= */
 
 const timeline = [
@@ -118,72 +106,124 @@ const stats = [
   { value: 25, suffix: "%", label: "Yield Improvement", icon: BarChart3 },
 ];
 
+const teamMembers = [
+  {
+    name: "Ayesha Alam Khurram",
+    role: "Director & CEO",
+    bio: "Leading Crop2X with a vision to digitize agriculture in Pakistan.",
+    image: "/assets/director-1.jpg",
+  },
+  {
+    name: "Wamiq Hamid",
+    role: "Director",
+    bio: "Co-driving Crop2X's mission to transform Pakistan's agricultural landscape.",
+    image: "/assets/director-2.jpg",
+  },
+];
+
+const advisoryBoard = [
+  {
+    name: "Mahmood Nawaz Shah",
+    role: "Director – Trade Development Authority of Pakistan (TDAP)",
+    image: "/assets/advisor-1.jpg",
+  },
+  {
+    name: "Aamer Hayat Bhandara",
+    role: "Co-Founder Agriculture Republic & Digital Dera | Farmer | Ex Member District Council",
+    image: "/assets/advisor-2.jpg",
+  },
+  {
+    name: "Tauseef Rab",
+    role: "Director of Engineering – Luminous Computing | Founder – Feeling Blessed",
+    image: "/assets/advisor-3.jpg",
+  },
+  {
+    name: "Mazhar Ali",
+    role: "Founder – IR Farms",
+    image: "/assets/advisor-4.jpg",
+  },
+  {
+    name: "Virender Kumar",
+    role: "Project Manager – Dalda",
+    image: "/assets/advisor-5.jpg",
+  },
+  {
+    name: "Laeeq Uz Zaman",
+    role: "Technical Advisor",
+    image: "/assets/advisor-6.jpg",
+  },
+];
+
+const achievements = [
+  { emoji: "📈", value: "100K+", label: "Acres Monitored" },
+  { emoji: "🌾", value: "500+", label: "Farmers Empowered" },
+  { emoji: "🏆", value: "Awards", label: "Incubation Programs & Grants" },
+  { emoji: "💡", value: "Research", label: "Publications & Innovations" },
+];
+
 /* ================= PAGE ================= */
 
 export default function AboutPage() {
   return (
     <>
       {/* HERO */}
-<section className="relative py-24 md:py-32 overflow-hidden">
-  {/* Background Image */}
-  <div className="absolute inset-0">
-    <img
-      src="/assets/about.jpg" // 👈 apni image ka path yahan do
-      alt="Agriculture Background"
-      className="w-full h-full object-cover"
-    />
-  </div>
-
-  {/* Optional Dark Overlay (better readability) */}
-  <div className="absolute inset-0 bg-black/50" />
-
-  {/* Content */}
-  <div className="container mx-auto px-6 text-center text-white relative z-10">
-    <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/10 border border-white/20">
-      <Sparkles className="w-4 h-4 text-green-300" />
-      <span className="text-sm">About Crop2X</span>
-    </div>
-
-    <h1 className="text-4xl md:text-6xl font-bold mb-6">
-      Transforming Agriculture Through Technology and Expertise
-    </h1>
-
-    <p className="text-lg md:text-xl text-green-100 max-w-3xl mx-auto">
-      Crop2X empowers farmers, agribusinesses, and governments with AI-driven insights, IoT solutions, and expert advisory — creating a climate-resilient, high-yield agriculture ecosystem in Pakistan.
-    </p>
-  </div>
-</section>
- {/* STATS */}
-<section className="py-16 bg-gradient-to-b from-white to-gray-50">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-      {stats.map((stat) => (
-        <div
-          key={stat.label}
-          className="group relative bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 p-6 text-center transition-all duration-300 hover:-translate-y-1 overflow-hidden"
-        >
-          {/* Glow Effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-          {/* Icon */}
-          <div className="relative w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-gradient-to-br from-green-100 to-green-200 text-green-700 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-            <stat.icon className="w-7 h-7" />
-          </div>
-
-          {/* Number */}
-          <h3 className="relative text-3xl font-extrabold text-gray-900 tracking-tight">
-            <CountUp end={stat.value} suffix={stat.suffix || ""} />
-          </h3>
-
-          {/* Label */}
-          <p className="relative mt-2 text-sm font-medium text-gray-500 group-hover:text-gray-700 transition">
-            {stat.label}
-          </p>
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/assets/about.jpg"
+            alt="Agriculture Background"
+            className="w-full h-full object-cover"
+          />
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="container mx-auto px-6 text-center text-white relative z-10">
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/10 border border-white/20">
+            <Sparkles className="w-4 h-4 text-green-300" />
+            <span className="text-sm">About Crop2X</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Transforming Agriculture Through Technology and Expertise
+          </h1>
+          <p className="text-lg md:text-xl text-green-100 max-w-3xl mx-auto mb-8">
+            Crop2X empowers farmers, agribusinesses, and governments with AI-driven insights, IoT solutions, and expert advisory — creating a climate-resilient, high-yield agriculture ecosystem in Pakistan.
+          </p>
+          <button
+            onClick={() => {
+              const el = document.querySelector("#our-story");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-medium transition"
+          >
+            Learn About Our Journey <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+      </section>
+
+      {/* STATS */}
+      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="group relative bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 p-6 text-center transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+                <div className="relative w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-gradient-to-br from-green-100 to-green-200 text-green-700 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <stat.icon className="w-7 h-7" />
+                </div>
+                <h3 className="relative text-3xl font-extrabold text-gray-900 tracking-tight">
+                  <CountUp end={stat.value} suffix={stat.suffix || ""} />
+                </h3>
+                <p className="relative mt-2 text-sm font-medium text-gray-500 group-hover:text-gray-700 transition">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* MISSION & VISION */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
@@ -194,7 +234,6 @@ export default function AboutPage() {
               To empower every farmer with precise, real-time agriculture insights, reducing risks and improving yields.
             </p>
           </div>
-
           <div className="bg-white p-8 rounded-2xl shadow">
             <Eye className="w-10 h-10 text-green-600 mb-4" />
             <h3 className="text-xl font-bold mb-3">Vision</h3>
@@ -205,74 +244,54 @@ export default function AboutPage() {
         </div>
       </section>
 
-{/* TIMELINE */}
-<section className="py-24 bg-white">
-  <div className="max-w-5xl mx-auto px-6">
-
-    {/* HEADING */}
-    <div className="text-center mb-16">
-      <span className="text-green-600 text-sm font-semibold uppercase tracking-wide">
-        Our Journey
-      </span>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">
-        How Crop2X Came to Life
-      </h2>
-      <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-        From a simple idea to a complete agriculture ecosystem — here’s how we evolved over time.
-      </p>
-    </div>
-
-    {/* TIMELINE */}
-    <div className="relative">
-
-      {/* VERTICAL LINE */}
-      <div className="absolute left-6 top-0 w-1 h-full bg-green-100"></div>
-
-      {timeline.map((item, i) => (
-        <div key={i} className="relative flex items-start gap-6 mb-12 group">
-
-          {/* DOT + YEAR */}
-          <div className="relative z-10">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-white font-semibold shadow-md group-hover:scale-110 transition">
-              {item.year}
-            </div>
-          </div>
-
-          {/* CONTENT CARD */}
-          <div className="flex-1 bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transition hover:-translate-y-1">
-
-            {/* TITLE + BADGE */}
-            <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
-              <h4 className="text-lg font-bold text-gray-900">
-                {item.title}
-              </h4>
-              <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">
-                {item.highlight}
-              </span>
-            </div>
-
-            {/* DESC */}
-            <p className="text-gray-600 text-sm leading-relaxed">
-              {item.desc}
+      {/* TIMELINE */}
+      <section id="our-story" className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-green-600 text-sm font-semibold uppercase tracking-wide">
+              Our Journey
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">
+              How Crop2X Came to Life
+            </h2>
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+              From a simple idea to a complete agriculture ecosystem — here's how we evolved over time.
             </p>
-
+          </div>
+          <div className="relative">
+            <div className="absolute left-6 top-0 w-1 h-full bg-green-100" />
+            {timeline.map((item, i) => (
+              <div key={i} className="relative flex items-start gap-6 mb-12 group">
+                <div className="relative z-10 flex-shrink-0">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold shadow-md group-hover:scale-110 transition text-center leading-tight px-1">
+                    {item.year}
+                  </div>
+                </div>
+                <div className="flex-1 bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transition hover:-translate-y-1">
+                  <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+                    <h4 className="text-lg font-bold text-gray-900">{item.title}</h4>
+                    <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">
+                      {item.highlight}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
+      </section>
 
-    </div>
-
-  </div>
-</section>
-
-      {/* WHY */}
+      {/* WHY CROP2X */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-12">Why Crop2X?</h2>
-
+          <span className="text-green-600 text-sm font-semibold uppercase tracking-wide">
+            Our Edge
+          </span>
+          <h2 className="text-3xl font-bold mt-3 mb-12">Why Crop2X?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {differentiators.map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl shadow">
+              <div key={i} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition hover:-translate-y-1">
                 <item.icon className="w-8 h-8 text-green-600 mx-auto mb-3" />
                 <h4 className="font-semibold mb-2">{item.title}</h4>
                 <p className="text-sm text-gray-600">{item.desc}</p>
@@ -281,92 +300,147 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-{/* ACHIEVEMENTS / RECOGNITION */}
-<section className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-6 text-center">
 
-    {/* HEADING */}
-    <div className="mb-14">
-      <span className="text-green-600 font-semibold text-sm uppercase tracking-wide">
-        Achievements
-      </span>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
-        Driving Impact, Backed by Results
-      </h2>
-      <p className="text-gray-500 max-w-2xl mx-auto">
-        Our growth is measured not just in numbers, but in the real impact we create for farmers and agriculture.
-      </p>
-    </div>
+      {/* ACHIEVEMENTS */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="mb-14">
+            <span className="text-green-600 font-semibold text-sm uppercase tracking-wide">
+              Achievements
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
+              Driving Impact, Backed by Results
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">
+              Our growth is measured not just in numbers, but in the real impact we create for farmers and agriculture.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {achievements.map((a, i) => (
+              <div
+                key={i}
+                className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition hover:-translate-y-2 border border-gray-100"
+              >
+                <div className="text-4xl mb-3">{a.emoji}</div>
+                <h3 className="text-2xl font-bold text-gray-900">{a.value}</h3>
+                <p className="text-gray-600 text-sm mt-1">{a.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    {/* GRID */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-      {/* CARD 1 */}
-      <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition hover:-translate-y-2">
-        <div className="text-4xl mb-3">📈</div>
-        <h3 className="text-2xl font-bold text-gray-900">100K+</h3>
-        <p className="text-gray-600 text-sm">Acres Monitored</p>
-      </div>
-
-      {/* CARD 2 */}
-      <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition hover:-translate-y-2">
-        <div className="text-4xl mb-3">🌾</div>
-        <h3 className="text-2xl font-bold text-gray-900">500+</h3>
-        <p className="text-gray-600 text-sm">Farmers Empowered</p>
-      </div>
-
-      {/* CARD 3 */}
-      <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition hover:-translate-y-2">
-        <div className="text-4xl mb-3">🏆</div>
-        <h3 className="text-2xl font-bold text-gray-900">Awards</h3>
-        <p className="text-gray-600 text-sm">Incubation Programs & Grants</p>
-      </div>
-
-      {/* CARD 4 */}
-      <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition hover:-translate-y-2">
-        <div className="text-4xl mb-3">💡</div>
-        <h3 className="text-2xl font-bold text-gray-900">Research</h3>
-        <p className="text-gray-600 text-sm">Publications & Innovations</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
       {/* TEAM */}
-      <section className="py-20 bg-white text-center">
-        <h2 className="text-3xl font-bold mb-10">
-          Meet the Minds Behind Crop2X
-        </h2>
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <span className="text-green-600 text-sm font-semibold uppercase tracking-wide">
+            Leadership
+          </span>
+          <h2 className="text-3xl font-bold mt-3 mb-12">
+            Meet the Minds Behind Crop2X
+          </h2>
 
-        <img
-          src="/assets/director-1.jpg"
-          className="w-32 h-32 rounded-full mx-auto mb-4"
-        />
-        <h3 className="text-xl font-semibold">Ayesha Alam Khurram</h3>
-        <p className="text-green-600 text-sm mb-2">Director & CEO</p>
-        <p className="text-gray-600 max-w-xl mx-auto">
-          Leading Crop2X with a vision to digitize agriculture in Pakistan.
-        </p>
+          {/* Directors */}
+          <div className="flex flex-wrap justify-center gap-10 mb-20">
+            {teamMembers.map((member, i) => (
+              <div key={i} className="flex flex-col items-center group">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg mb-4 group-hover:scale-105 transition">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                      e.target.parentNode.classList.add(
+                        "bg-green-100",
+                        "flex",
+                        "items-center",
+                        "justify-content-center"
+                      );
+                    }}
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
+                <p className="text-green-600 text-sm font-medium mb-2">{member.role}</p>
+                <p className="text-gray-500 text-sm max-w-xs">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Advisory Board */}
+          <div className="border-t border-gray-200 pt-16">
+            <span className="text-green-600 text-sm font-semibold uppercase tracking-wide">
+              Advisors
+            </span>
+            <h3 className="text-2xl font-bold text-gray-900 mt-3 mb-10">
+              Advisory Board
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {advisoryBoard.map((advisor, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition hover:-translate-y-1 text-left"
+                >
+                  <div className="w-16 h-16 rounded-full overflow-hidden bg-green-100 flex-shrink-0 border-2 border-green-50 shadow">
+                    <img
+                      src={advisor.image}
+                      alt={advisor.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.target.style.display = "none";
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 text-sm">{advisor.name}</h4>
+                    <p className="text-gray-500 text-xs mt-1 leading-relaxed">{advisor.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gray-900 text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">
-          Join Our Journey in Transforming Agriculture
-        </h2>
-
-        <p className="mb-6 text-gray-300">
-          Partner with Crop2X to build a smarter future.
-        </p>
-
-        <div className="flex justify-center gap-4">
-          <Link href="/pages/Contact" className="bg-green-600 px-6 py-3 rounded-xl">
-            Request Demo
-          </Link>
-          <Link href="/pages/Solutions" className="border px-6 py-3 rounded-xl">
-            Explore Solutions
-          </Link>
+      <section className="relative py-24 bg-gray-900 text-white text-center overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img
+            src="/assets/about.jpg"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative z-10 max-w-3xl mx-auto px-6">
+          <span className="inline-block text-green-400 text-sm font-semibold uppercase tracking-wide mb-4">
+            Get Started
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Join Our Journey in Transforming Agriculture
+          </h2>
+          <p className="mb-8 text-gray-300 text-lg">
+            Partner with Crop2X to build a smarter, more sustainable future for farming.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/pages/Contact"
+              className="bg-green-600 hover:bg-green-700 px-8 py-3 rounded-xl font-medium transition flex items-center gap-2"
+            >
+              Request Demo <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/pages/Contact"
+              className="border border-white/40 hover:bg-white/10 px-8 py-3 rounded-xl font-medium transition"
+            >
+              Partner With Us
+            </Link>
+            <Link
+              href="/pages/Solutions"
+              className="border border-white/40 hover:bg-white/10 px-8 py-3 rounded-xl font-medium transition"
+            >
+              Explore Solutions
+            </Link>
+          </div>
         </div>
       </section>
     </>

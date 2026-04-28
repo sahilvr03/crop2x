@@ -8,7 +8,7 @@ const footerLinks = {
   company: [
     { name: "About Us", href: "/pages/About" },
     { name: "Our Impact", href: "/pages/Impact" },
-    { name: "Blog", href: "/pages/Blog" },
+    { name: "Blog", href: "/pages/dropdownpages/blogs" },
   ],
   solutions: [
     { name: "Sensor & IoT", href: "/pages/Solutions" },
@@ -20,7 +20,7 @@ const footerLinks = {
     { name: "Crop2X Sensor Probes", href: "/pages/Products" },
     { name: "Weather Tracker", href: "/pages/Products" },
     { name: "Ag5X Platform", href: "/pages/Products" },
-    { name: "Infarm Box", href: "/pages/Products" },
+    { name: "Infarm Box", href: "/pages/dropdownpages/InfarmBox" },
   ],
   support: [
     { name: "Contact Us", href: "/pages/Contact" },

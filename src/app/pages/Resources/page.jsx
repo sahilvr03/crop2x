@@ -14,14 +14,62 @@ const articles = [
 ];
 
 const faqs = [
-  { q: "What crops does Crop2X support?", a: "Crop2X solutions work across major crops including wheat, cotton, rice, sugarcane, maize, and vegetables. Our platform adapts to both row crops and orchards." },
-  { q: "Do I need internet connectivity in my farm?", a: "Sensors use cellular connectivity and work in remote areas. Data is stored locally and synced when connection is available. The platform works on any internet-enabled device." },
-  { q: "How long does sensor installation take?", a: "Deployment typically takes 1–2 days with immediate data availability. Our team provides on-site training and remote support." },
-  { q: "What is the cost structure?", a: "Flexible subscription and FaaS models are available, starting from affordable monthly plans. Contact our sales team for customized pricing based on farm size and needs." },
-  { q: "Is my data secure?", a: "Yes, we use enterprise-grade encryption and comply with data protection regulations. You own your farm data completely." },
-  { q: "Can I integrate with existing farm equipment?", a: "Our platform supports API integration with major irrigation controllers, weather stations, and farm management software." },
+  {
+    category: "General",
+    q: "What is Crop2X?",
+    a: "We integrate IoT hardware and satellite-driven AI to optimize farm resources, maximize crop yield, and provide real-time agronomic advisory."
+  },
+  {
+    category: "General",
+    q: "Do I need a massive corporate farm to use Crop2X?",
+    a: "No. Our solutions scale from independent commercial plots (e.g., 15-acre sites) to massive corporate agriculture operations."
+  },
+  {
+    category: "Ag5x Platform",
+    q: "What is Ag5x?",
+    a: "Ag5x is our flagship platform that creates a \"digital twin\" of your farm. It uses satellite imagery to monitor crop health (NDVI), predict pest outbreaks, digitize farm logs, and forecast yield."
+  },
+  {
+    category: "AquaSave Pro",
+    q: "What does the AquaSave Pro device measure?",
+    a: "It features multi-depth IoT sensor probes that track soil moisture, temperature, and salinity (EC) in real time to prescribe exact water requirements."
+  },
+  {
+    category: "AquaSave Pro",
+    q: "How does it help during the rainfall season?",
+    a: "The system includes localized weather intelligence and predictive rain forecasts, allowing you to optimize or halt irrigation schedules ahead of monsoon conditions to prevent over-watering."
+  },
+  {
+    category: "AquaSave Pro",
+    q: "Is the device dependent on grid electricity?",
+    a: "No. AquaSave Pro is entirely solar-powered and designed for remote operation."
+  },
+  {
+    category: "AquaSave Pro",
+    q: "Do I need a strong internet connection in the middle of my field?",
+    a: "The AquaSave Pro relies on low-bandwidth IoT connectivity (cellular/GSM), allowing it to transmit critical soil and weather data even in areas with weak standard network coverage."
+  },
+  {
+    category: "FAAS",
+    q: "What is Farming as a Service (FAAS)?",
+    a: "FAAS is our consulting-led model where Crop2X acts as your \"Remote Agronomist.\" You receive actionable agronomic advisory, soil lab analysis (pH, EC, NPK), and structured bi-weekly performance reports."
+  },
+  {
+    category: "FAAS",
+    q: "What is the onboarding process?",
+    a: "We follow a rapid deployment workflow: map your pain points → propose a service plan → collect your farm's KML boundaries for satellite tracking → deploy hardware and begin monitoring."
+  },
+  {
+    category: "FAAS",
+    q: "Who handles the physical soil testing?",
+    a: "Under our FAAS model, our team collects physical soil samples from your farm and runs them through lab analysis for essential metrics like pH, EC, and NPK to establish a baseline."
+  },
+  {
+    category: "Support",
+    q: "What kind of support do I get after installation?",
+    a: "You are assigned a dedicated technical team and agronomist. They provide ongoing troubleshooting, help interpret the Ag5x dashboard, and deliver structured bi-weekly performance reports."
+  },
 ];
-
 const categories = ["All", "Guide", "Article", "Whitepaper", "Report"];
 
 export default function ResourcesPage() {
@@ -70,50 +118,75 @@ export default function ResourcesPage() {
 </section>
 
       {/* RESOURCE TYPE CARDS */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: BookOpen,
-                title: "Blog & Articles",
-                desc: "Latest agritech insights and farming best practices.",
-                color: "from-green-600 to-emerald-500",
-                count: "12+ articles",
-              },
-              {
-                icon: FileText,
-                title: "Whitepapers & Reports",
-                desc: "Deep research on precision agriculture technologies.",
-                color: "from-blue-600 to-cyan-500",
-                count: "5 reports",
-              },
-              {
-                icon: HelpCircle,
-                title: "Guides & FAQs",
-                desc: "Step-by-step guides and answers to common questions.",
-                color: "from-amber-600 to-orange-500",
-                count: "24+ guides",
-              },
-            ].map((resource) => (
-              <div
-                key={resource.title}
-                className="group p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center bg-gradient-to-br from-white to-gray-50"
-              >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${resource.color} text-white flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md`}>
-                  <resource.icon className="w-7 h-7" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{resource.title}</h3>
-                <p className="text-sm text-gray-600 mb-3">{resource.desc}</p>
-                <span className="text-xs font-medium text-green-700 bg-green-50 px-2 py-1 rounded-full">
-                  {resource.count}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
+
+<section className="py-16 bg-white">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid md:grid-cols-3 gap-6">
+      {[
+        {
+          icon: BookOpen,
+          title: "Blog & Articles",
+          desc: "Latest agritech insights and farming best practices.",
+          color: "from-green-600 to-emerald-500",
+          count: "12+ articles",
+          href: "/pages/dropdownpages/blogs",
+        },
+        {
+          icon: FileText,
+          title: "Whitepapers & Reports",
+          desc: "Deep research on precision agriculture technologies.",
+          color: "from-blue-600 to-cyan-500",
+          count: "5 reports",
+          href: "/resources/whitepapers",
+        },
+        {
+          icon: HelpCircle,
+          title: "Guides & FAQs",
+          desc: "Step-by-step guides and answers to common questions.",
+          color: "from-amber-600 to-orange-500",
+          count: "24+ guides",
+          href: "#faqs",
+        },
+      ].map((resource) => (
+        resource.href.startsWith("#") ? (
+          <button
+            key={resource.title}
+            onClick={() => {
+              const el = document.querySelector(resource.href);
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="group p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center bg-gradient-to-br from-white to-gray-50 w-full cursor-pointer"
+          >
+            <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${resource.color} text-white flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md`}>
+              <resource.icon className="w-7 h-7" />
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-2">{resource.title}</h3>
+            <p className="text-sm text-gray-600 mb-3">{resource.desc}</p>
+            <span className="text-xs font-medium text-green-700 bg-green-50 px-2 py-1 rounded-full">
+              {resource.count}
+            </span>
+          </button>
+        ) : (
+          <Link
+            key={resource.title}
+            href={resource.href}
+            className="group p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center bg-gradient-to-br from-white to-gray-50 block no-underline"
+          >
+            <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${resource.color} text-white flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md`}>
+              <resource.icon className="w-7 h-7" />
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-2">{resource.title}</h3>
+            <p className="text-sm text-gray-600 mb-3">{resource.desc}</p>
+            <span className="text-xs font-medium text-green-700 bg-green-50 px-2 py-1 rounded-full">
+              {resource.count}
+            </span>
+          </Link>
+        )
+      ))}
+    </div>
+  </div>
+</section>
       {/* FEATURED ARTICLE */}
       {featuredArticles.length > 0 && (
         <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
@@ -155,67 +228,10 @@ export default function ResourcesPage() {
       )}
 
       {/* ARTICLES GRID WITH FILTER */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Latest Resources</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Explore our collection of articles, guides, and research</p>
-          </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  activeCategory === cat
-                    ? "bg-green-600 text-white shadow-md"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
-          {/* Articles Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {regularArticles.map((article) => (
-              <div
-                key={article.title}
-                className="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs font-semibold text-green-700 bg-green-50 px-2 py-1 rounded-full">
-                    {article.category}
-                  </span>
-                  <span className="text-xs text-gray-500">{article.date}</span>
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-green-700 transition-colors line-clamp-2">
-                  {article.title}
-                </h3>
-                <p className="text-xs text-gray-500 mb-4">{article.readTime}</p>
-                <Link
-                  href="/resources/article"
-                  className="inline-flex items-center gap-2 text-green-700 font-medium text-sm group-hover:gap-3 transition-all"
-                >
-                  Read <ArrowRight size={14} />
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          {regularArticles.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-500">No articles found in this category.</p>
-            </div>
-          )}
-        </div>
-      </section>
 
       {/* FAQ SECTION - Accordion Style */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white" id="faqs">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-sm font-semibold tracking-wide mb-3">

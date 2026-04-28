@@ -50,7 +50,7 @@ export default function ContactPage() {
   };
 
   const contactMethods = [
-    { icon: Phone, label: "Phone", value: "+92 300 1234567", href: "tel:+923001234567", detail: "Mon-Fri, 9am-6pm PST" },
+    { icon: Phone, label: "Phone", value: "+92 346 7666791", href: "+92 346 7666791", detail: "Mon-Fri, 9am-6pm PST" },
     { icon: Mail, label: "Email", value: "info@crop2x.com", href: "mailto:info@crop2x.com", detail: "Response within 24h" },
     { icon: MapPin, label: "Address", value: "Room # 001, ICCBS Technology Incubator and Industrial Park Center 2, Industrial Linkages Building, International Center for Chemical and Biological Sciences, University Of Karachi, Karachi, Karachi City, Sindh", href: "#", detail: "Main office, by appointment" },
   ];

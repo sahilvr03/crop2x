@@ -66,27 +66,27 @@ const acceleration = [
 
   {
     id: 2,
-    name: "GSMA",
+    name: "Acumen Academy",
     logo: C1
   },
   {
     id: 3,
-    name: "dalda",
+    name: "Village Capital",
     logo: C2
   },
    {
     id: 4,
-    name: "Smart City Lab",
+    name: "Shell tameer",
     logo: C3
   },
   {
     id: 5,
-    name: "Ir Farms",
+    name: "GSMA",
     logo: C4
   },
   {
     id: 6,
-    name: "Telenor Pakistan ",
+    name: "Pasha ICT Award",
     logo: C5
   },
  
