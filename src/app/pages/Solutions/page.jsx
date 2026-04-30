@@ -199,13 +199,13 @@ export default function SolutionsPage() {
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap gap-4 pt-4">
                   <Link
-                    href="/contact"
+                    href="/pages/Products"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
                   >
                     Learn More <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
-                    href="/products"
+                    href="/pages/Products"
                     className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium hover:border-green-500 hover:text-green-700 hover:bg-green-50 transition-all duration-300"
                   >
                     View Products

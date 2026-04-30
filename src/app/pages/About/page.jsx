@@ -117,7 +117,7 @@ const teamMembers = [
     name: "Wamiq Hamid",
     role: "Director",
     bio: "Co-driving Crop2X's mission to transform Pakistan's agricultural landscape.",
-    image: "/assets/director-2.jpg",
+    image: "/assets/wamiq.jpg",
   },
 ];
 
@@ -125,32 +125,37 @@ const advisoryBoard = [
   {
     name: "Mahmood Nawaz Shah",
     role: "Director – Trade Development Authority of Pakistan (TDAP)",
-    image: "/assets/advisor-1.jpg",
+    image: "/assets/nawaz.jpg",
   },
   {
     name: "Aamer Hayat Bhandara",
     role: "Co-Founder Agriculture Republic & Digital Dera | Farmer | Ex Member District Council",
-    image: "/assets/advisor-2.jpg",
+    image: "/assets/aamer.jpeg",
   },
   {
     name: "Tauseef Rab",
     role: "Director of Engineering – Luminous Computing | Founder – Feeling Blessed",
-    image: "/assets/advisor-3.jpg",
+    image: "/assets/rab.jpeg",
   },
   {
     name: "Mazhar Ali",
     role: "Founder – IR Farms",
-    image: "/assets/advisor-4.jpg",
+    image: "/assets/mazhar.jpeg",
   },
   {
     name: "Virender Kumar",
     role: "Project Manager – Dalda",
-    image: "/assets/advisor-5.jpg",
+    image: "/assets/kumar.jpg",
   },
   {
     name: "Laeeq Uz Zaman",
     role: "Technical Advisor",
-    image: "/assets/advisor-6.jpg",
+    image: "/assets/laeeq.png",
+  },
+    {
+    name: "Huma Zia",
+    role: "Assistant Professor at Abu Dhabi University",
+    image: "/assets/huma.jpeg",
   },
 ];
 
@@ -331,76 +336,100 @@ export default function AboutPage() {
       </section>
 
       {/* TEAM */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="text-green-600 text-sm font-semibold uppercase tracking-wide">
-            Leadership
-          </span>
-          <h2 className="text-3xl font-bold mt-3 mb-12">
-            Meet the Minds Behind Crop2X
-          </h2>
+<section className="py-28 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-6 text-center">
+    
+    <span className="text-green-600 text-base font-semibold uppercase tracking-wider">
+      Leadership
+    </span>
 
-          {/* Directors */}
-          <div className="flex flex-wrap justify-center gap-10 mb-20">
-            {teamMembers.map((member, i) => (
-              <div key={i} className="flex flex-col items-center group">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg mb-4 group-hover:scale-105 transition">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                      e.target.parentNode.classList.add(
-                        "bg-green-100",
-                        "flex",
-                        "items-center",
-                        "justify-content-center"
-                      );
-                    }}
-                  />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-                <p className="text-green-600 text-sm font-medium mb-2">{member.role}</p>
-                <p className="text-gray-500 text-sm max-w-xs">{member.bio}</p>
-              </div>
-            ))}
+    <h2 className="text-4xl font-bold mt-4 mb-16">
+      Meet the Minds Behind Crop2X
+    </h2>
+
+    {/* Directors */}
+    <div className="flex flex-wrap justify-center gap-14 mb-24">
+      {teamMembers.map((member, i) => (
+        <div key={i} className="flex flex-col items-center group max-w-xs">
+          
+          <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white shadow-xl mb-5 group-hover:scale-105 transition duration-300">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.style.display = "none";
+                e.target.parentNode.classList.add(
+                  "bg-green-100",
+                  "flex",
+                  "items-center",
+                  "justify-center"
+                );
+              }}
+            />
           </div>
 
-          {/* Advisory Board */}
-          <div className="border-t border-gray-200 pt-16">
-            <span className="text-green-600 text-sm font-semibold uppercase tracking-wide">
-              Advisors
-            </span>
-            <h3 className="text-2xl font-bold text-gray-900 mt-3 mb-10">
-              Advisory Board
-            </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {advisoryBoard.map((advisor, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition hover:-translate-y-1 text-left"
-                >
-                  <div className="w-16 h-16 rounded-full overflow-hidden bg-green-100 flex-shrink-0 border-2 border-green-50 shadow">
-                    <img
-                      src={advisor.image}
-                      alt={advisor.name}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.target.style.display = "none";
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 text-sm">{advisor.name}</h4>
-                    <p className="text-gray-500 text-xs mt-1 leading-relaxed">{advisor.role}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <h3 className="text-xl font-semibold text-gray-900">
+            {member.name}
+          </h3>
+
+          <p className="text-green-600 text-sm font-medium mt-1 mb-2">
+            {member.role}
+          </p>
+
+          <p className="text-gray-500 text-sm leading-relaxed">
+            {member.bio}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* Advisory Board */}
+    <div className="border-t border-gray-200 pt-20">
+      
+      <span className="text-green-600 text-base font-semibold uppercase tracking-wider">
+        Advisors
+      </span>
+
+      <h3 className="text-3xl font-bold text-gray-900 mt-4 mb-12">
+        Advisory Board
+      </h3>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        {advisoryBoard.map((advisor, i) => (
+          <div
+            key={i}
+            className="flex items-center gap-5 bg-white p-6 rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition hover:-translate-y-1"
+          >
+            
+            <div className="w-20 h-20 rounded-full overflow-hidden bg-green-100 flex-shrink-0 border-2 border-green-50 shadow">
+              <img
+                src={advisor.image}
+                alt={advisor.name}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                }}
+              />
+            </div>
+
+            <div className="text-left">
+              <h4 className="font-semibold text-gray-900 text-base">
+                {advisor.name}
+              </h4>
+
+              <p className="text-gray-500 text-sm mt-1 leading-relaxed">
+                {advisor.role}
+              </p>
+            </div>
+
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* CTA */}
       <section className="relative py-24 bg-gray-900 text-white text-center overflow-hidden">

@@ -138,7 +138,7 @@ export default function ResourcesPage() {
           desc: "Deep research on precision agriculture technologies.",
           color: "from-blue-600 to-cyan-500",
           count: "5 reports",
-          href: "/resources/whitepapers",
+          href: "/pages/whitepaper",
         },
         {
           icon: HelpCircle,

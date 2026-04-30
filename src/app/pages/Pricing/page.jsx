@@ -7,13 +7,13 @@ const plans = [
     sub: "AquaSave Pro IoT Device",
     badge: "Most Popular",
     featured: true,
-    priceMain: "60,000 PKR",
-    priceNote: "One-time hardware + 3,000 PKR/month",
+    priceMonthly: "3,000 PKR/month",
+    priceOnetime: "60,000 PKR one-time hardware",
     features: [
       "AquaSave Pro IoT Device",
-      "7 Real-Time Sensors: Soil Moisture, Temp, Humidity, EC, pH, Salinity",
+      "7 Real-Time Sensors: Soil Moisture, Temp, Humidity, EC, Salinity",
       "AI-Powered Water Conservation & Smart Irrigation Advisory",
-      "Comprehensive Lab Testing: Physical Soil & Water (pH, EC, NPK, TDS)",
+      "Comprehensive Lab Testing: Physical Soil & Water ( EC, NPK, TDS)",
       "AI Soil Analysis per plot",
       "14-Day Daily Weather Forecast",
       "Rain Forecast for Irrigation Management",
@@ -27,8 +27,8 @@ const plans = [
     sub: "Satellite Monitoring",
     badge: "Satellite AI",
     featured: false,
-    priceMain: "300 PKR/acre/month",
-    priceNote: "Seasonal plan (6 months) · Min 1 acre",
+    priceMonthly: "300 PKR/acre/month",
+    priceOnetime: "Seasonal plan (6 months) · Min 1 acre",
     features: [
       "Satellite Monitored via Ag5x",
       "Bi-Weekly Satellite Imagery Reports (NDVI & NDMI)",
@@ -45,15 +45,15 @@ const plans = [
     sub: "AquaSave Pro + Ag5x",
     badge: "Best Value",
     featured: true,
-    priceMain: "60,000 PKR",
-    priceNote: "One-time hardware + 4,000 PKR/month",
+    priceMonthly: "4,000 PKR/month",
+    priceOnetime: "60,000 PKR one-time hardware",
     features: [
       "Satellite Monitored via Ag5x (NDVI & NDMI)",
       "Bi-Weekly Satellite Imagery Reports",
       "AquaSave Pro IoT Device",
-      "7 Real-Time Sensors (Moisture, Temp, Humidity, EC, pH, Salinity)",
+      "7 Real-Time Sensors (Moisture, Temp, Humidity, EC, Salinity)",
       "AI Water Conservation & Irrigation Advisory",
-      "Comprehensive Lab Testing (pH, EC, NPK, TDS)",
+      "Comprehensive Lab Testing (EC, NPK, TDS)",
       "14-Day Weather Forecast & Rain Forecast",
       "Cropwise Weather AI Analysis",
       "AI Disease & Pest Prediction Alerts",
@@ -67,8 +67,8 @@ const plans = [
     sub: "AquaSave Pro + Ag5x + FAAS",
     badge: "Ultimate",
     featured: false,
-    priceMain: "60,000 PKR",
-    priceNote: "One-time hardware + 7,000 PKR/month · Max 25 acres/device",
+    priceMonthly: "7,000 PKR/month",
+    priceOnetime: "60,000 PKR one-time hardware · Max 25 acres/device",
     features: [
       "All Precision Synergy features included",
       "Dedicated FAAS Agronomist (end-to-end crop stage guidance)",
@@ -83,8 +83,8 @@ const plans = [
     sub: "FAAS — Expert Consulting",
     badge: "Expert-Led",
     featured: false,
-    priceMain: "15,000 PKR/crop",
-    priceNote: "6-month duration · Unlimited acres",
+    priceMonthly: "15,000 PKR/crop",
+    priceOnetime: "6-month duration · Unlimited acres",
     features: [
       "Dedicated FAAS Agronomist Assigned",
       "Crop Stage-wise Fertilization Advisory",
@@ -100,8 +100,8 @@ const plans = [
     sub: "FAAS Organic Specialist",
     badge: "Chemical-Free",
     featured: false,
-    priceMain: "25,000 PKR/crop",
-    priceNote: "6-month duration · Unlimited acres",
+    priceMonthly: "25,000 PKR/crop",
+    priceOnetime: "6-month duration · Unlimited acres",
     features: [
       "Dedicated FAAS Agronomist (Organic Specialist)",
       "Chemical-Free & Organic Crop Operations Guidance",
@@ -117,14 +117,14 @@ const plans = [
     sub: "AquaSave Pro + Weather Tracker",
     badge: "Microclimate",
     featured: false,
-    priceMain: "75,000 PKR",
-    priceNote: "One-time hardware + 4,500 PKR/month",
+    priceMonthly: "4,500 PKR/month",
+    priceOnetime: "75,000 PKR one-time hardware",
     features: [
       "AquaSave Pro IoT + On-Field Weather Tracker",
-      "7 Real-Time Sensors (Moisture, Temp, Humidity, EC, pH, Salinity)",
+      "7 Real-Time Sensors (Moisture, Temp, Humidity, EC, Salinity)",
       "Hyper-Local Weather Tracking (wind speed, temperature, humidity)",
       "AI Water Conservation & Irrigation Advisory",
-      "Comprehensive Lab Testing (pH, EC, NPK, TDS)",
+      "Comprehensive Lab Testing (EC, NPK, TDS)",
       "Rain Forecast for Irrigation Management",
       "Smart Spraying Advisories (synced with local wind & temp)",
     ],
@@ -135,8 +135,8 @@ const plans = [
     sub: "One-time lab analysis",
     badge: "Standalone",
     featured: false,
-    priceMain: "2,500 PKR/sample",
-    priceNote: "One-time fee per physical sample",
+    priceMonthly: "2,500 PKR/sample",
+    priceOnetime: "One-time fee per physical sample",
     features: [
       "Comprehensive Physical Lab Testing",
       "NPK Profiling (Nitrogen, Phosphorus, Potassium)",
@@ -154,24 +154,23 @@ export default function PricingPage() {
   return (
     <>
       {/* ── Hero ── */}
-<section className="relative py-24 md:py-32 overflow-hidden">
-  
-  <div className="absolute inset-0">
-    <img
-      src="/assets/pricing.png" // 👈 yahan ek wide farm + sunrise / data vibe image use karo
-      alt="Agriculture Impact"
-      className="w-full h-full object-cover scale-105"
-    />
-  </div>
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/assets/pricing.png"
+            alt="Agriculture Impact"
+            className="w-full h-full object-cover scale-105"
+          />
+        </div>
 
-  {/* Overlay (thoda strong for contrast) */} 
-  <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80" />
 
-  {/* Pattern (optional, rakhna ho to) */}
-  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+        {/* Pattern */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
 
-  {/* Content */}
-     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+        {/* Content */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
             Pricing plans
           </h1>
@@ -180,7 +179,7 @@ export default function PricingPage() {
             software for modern farming.
           </p>
         </div>
-</section>
+      </section>
 
       {/* ── Plans Grid ── */}
       <section className="py-24 bg-white">
@@ -220,12 +219,12 @@ export default function PricingPage() {
                 </h3>
                 <p className="text-xs text-gray-500 mb-4">{plan.sub}</p>
 
-                {/* Price */}
+                {/* Price — monthly bold & first, one-time normal below */}
                 <div className="mb-6">
                   <p className="text-2xl font-bold text-gray-900">
-                    {plan.priceMain}
+                    {plan.priceMonthly}
                   </p>
-                  <span className="text-sm text-gray-500">{plan.priceNote}</span>
+                  <p className="text-sm text-gray-500 mt-1">{plan.priceOnetime}</p>
                 </div>
 
                 {/* Features */}

@@ -36,7 +36,7 @@ const services = [
     icon: FlaskConical,
     title: "Soil Nutrient Analysis",
     desc:
-      "Unlock what's happening beneath the surface. Our on-farm NPK testing uses a combination of probe sensors and lab validation to map soil fertility at a granular level — enabling precision fertilization that cuts waste and boosts crop health.",
+      "Unlock what's happening beneath the surface. Our process relies on precise laboratory analysis of your field's soil samples to map NPK fertility at a granular level. We provide complete land profiling to clearly differentiate highly productive zones from underperforming patches across your farm. Beyond the raw data, our agronomists provide detailed insights and expert opinions on your lab results, recommending the most suitable crops for your specific soil profile. Together, this comprehensive approach empowers precision fertilization—cutting waste and boosting overall crop health. ",
     tag: "Lab & Sensor",
     color: "from-teal-600 to-cyan-500",
     bg: "bg-teal-50",
@@ -54,7 +54,7 @@ const services = [
   },
   {
     icon: FileText,
-    title: "Weekly Farm Reports",
+    title: "Bi-Weekly Farm Reports",
     desc:
       "Every week, receive a comprehensive farm health digest covering soil moisture, canopy health (via NDVI), water usage, and actionable next steps. Reports are auto-generated from live platform data and reviewed by our agronomic team.",
     tag: "Reporting",

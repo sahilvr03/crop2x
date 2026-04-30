@@ -19,14 +19,14 @@ const footerLinks = {
   products: [
     { name: "Crop2X Sensor Probes", href: "/pages/Products" },
     { name: "Weather Tracker", href: "/pages/Products" },
-    { name: "Ag5X Platform", href: "/pages/Products" },
-    { name: "Infarm Box", href: "/pages/dropdownpages/InfarmBox" },
+    { name: "Ag5X Platform", href: "https://cropmonitoring.crop2x.com/", external: true },
+    { name: "Infarm Box", href: "https://infarmbox.vercel.app/",  external: true },
   ],
   support: [
     { name: "Contact Us", href: "/pages/Contact" },
     { name: "FAQs", href: "/pages/Resources#faq" },
     { name: "Resource Center", href: "/pages/Resources" },
-    { name: "Privacy Policy", href: "/pages/Privacy" },
+    { name: "Privacy Policy", href: "/pages/privacy" },
   ],
 };
 

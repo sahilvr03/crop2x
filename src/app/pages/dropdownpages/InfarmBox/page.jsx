@@ -142,13 +142,13 @@ export default function InfarmBoxPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="#order"
+                href="https://infarmbox.vercel.app/farmboxes?category=season"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-xl font-semibold hover:scale-105 transition-all shadow-lg shadow-green-900/30"
               >
                 Order Now <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="#benefits"
+                href="https://infarmbox.vercel.app"
                 className="inline-flex items-center gap-2 px-7 py-3.5 border border-green-600 text-green-700 rounded-xl font-semibold hover:bg-green-50 transition-all"
               >
                 Learn More
