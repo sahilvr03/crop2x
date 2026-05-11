@@ -8,7 +8,7 @@ const products = [
   {
     name: "AquaSave Pro",
     tagline: "Smart IoT Soil Monitoring",
-    desc: "Advanced multi-parameter IoT sensor measuring soil moisture, temperature, pH, and EC for precision irrigation.",
+    desc: "Advanced multi-parameter IoT sensor measuring soil moisture, temperature,  and EC for precision irrigation.",
     specs: ["6+ soil parameters", "Solar powered", "Cellular connectivity", "IP67 rated", "2-year battery"],
     icon: Cpu,
     image: "/sensorprob2.png",
