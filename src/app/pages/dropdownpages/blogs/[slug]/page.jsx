@@ -1,8 +1,8 @@
 import { blogs } from "../../../../blog";
 import Image from "next/image";
 
-export default function BlogDetail({ params }) {
-  const { slug } = params;
+export default async function BlogDetail({ params }) {
+  const { slug } = await params;
 
   const blog = blogs.find((b) => b.slug === slug);
 
