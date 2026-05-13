@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Sparkles, Clock, Shield, Users, CheckCircle } from "lucide-react";
 
 // ✅ Change this to your deployed backend URL in production
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://contact-theta-amber.vercel.app";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
