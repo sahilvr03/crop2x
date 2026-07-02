@@ -57,29 +57,29 @@ const megaMenus = {
       {
         title: "Sensor & IoT Solutions",
         items: [
-          { name: "Crop2X Sensor Probes", href: "/pages/Products", desc: "Real-time soil monitoring" },
-          { name: "Weather Tracker", href: "/pages/Products", desc: "Hyper-local weather data" },
+          { name: "Crop2X Sensor Probes", href: "/pages/Products#crop2x-sensor-probes", desc: "Real-time soil monitoring" },
+          { name: "Weather Tracker", href: "/pages/Products#weather-tracker", desc: "Hyper-local weather data" },
         ],
       },
       {
         title: "Software & Platforms",
         items: [
-          { name: "Satellite Intelligence (Ag5X)", href: "/pages/Products", desc: "AI-powered NDVI analysis" },
-          { name: "Water Scheduling Platform", href: "/pages/Products", desc: "Smart irrigation control" },
+          { name: "Satellite Intelligence (Ag5X)", href: "/pages/Products#ag5x", desc: "AI-powered NDVI analysis" },
+          { name: "Water Scheduling Platform", href: "/pages/Solutions#smart-water-management", desc: "Smart irrigation control" },
         ],
       },
       {
         title: "Farm as a Service (FaaS)",
         items: [
-          { name: "Agronomic Advisory", href: "/pages/Solutions", desc: "Expert crop guidance" },
-          { name: "Farm Management Support", href: "/pages/Solutions", desc: "End-to-end operations" },
-          { name: "Platform Monitoring", href: "/pages/Solutions", desc: "Live field dashboards" },
+          { name: "Agronomic Advisory", href: "/pages/Services#agronomic-advisory", desc: "Expert crop guidance" },
+          { name: "Farm Management Support", href: "/pages/Services#field-visits-audits", desc: "End-to-end operations" },
+          { name: "Platform Monitoring", href: "/pages/Services#bi-weekly-farm-reports", desc: "Live field dashboards" },
         ],
       },
       {
         title: "Value Chain & Delivery",
         items: [
-          { name: "Infarm Box", href: "/pages/Products", desc: "Farm-to-fork traceability" },
+          { name: "Infarm Box", href: "/pages/dropdownpages/InfarmBox", desc: "Farm-to-fork traceability" },
         ],
       },
     ],
@@ -91,8 +91,8 @@ const megaMenus = {
       {
         title: "Hardware",
         items: [
-          { name: "Crop2X Sensor Probes", href: "/pages/Products", desc: "Soil intelligence probes" },
-          { name: "Weather Tracker", href: "/pages/Products", desc: "Field-level weather stations" },
+          { name: "Crop2X Sensor Probes", href: "/pages/Products#crop2x-sensor-probes", desc: "Soil intelligence probes" },
+          { name: "Weather Tracker", href: "/pages/Products#weather-tracker", desc: "Field-level weather stations" },
         ],
       },
       {
@@ -117,15 +117,15 @@ const megaMenus = {
       {
         title: "Advisory",
         items: [
-          { name: "Soil Nutrient Analysis", href: "/pages/Solutions", desc: "Lab & sensor-based reports" },
-          { name: "Pest Attack Prediction", href: "/pages/Solutions", desc: "AI-powered early warnings" },
+          { name: "Soil Nutrient Analysis", href: "/pages/Services#soil-nutrient-analysis", desc: "Lab & sensor-based reports" },
+          { name: "Pest Attack Prediction", href: "/pages/Services#pest-attack-prediction-advisory", desc: "AI-powered early warnings" },
         ],
       },
       {
         title: "Field Support",
         items: [
-          { name: "Weekly Crop Reports", href: "/pages/Solutions", desc: "Regular insights delivered" },
-          { name: "Field Visits & Audits", href: "/pages/Solutions", desc: "On-ground expert reviews" },
+          { name: "Weekly Crop Reports", href: "/pages/Services#bi-weekly-farm-reports", desc: "Regular insights delivered" },
+          { name: "Field Visits & Audits", href: "/pages/Services#field-visits-audits", desc: "On-ground expert reviews" },
         ],
       },
     ],

@@ -23,6 +23,7 @@ import {
 
 const services = [
   {
+    slug: "agronomic-advisory",
     icon: UserCheck,
     title: "Agronomic Advisory",
     desc:
@@ -33,6 +34,7 @@ const services = [
     text: "text-green-700",
   },
   {
+    slug: "soil-nutrient-analysis",
     icon: FlaskConical,
     title: "Soil Nutrient Analysis",
     desc:
@@ -43,6 +45,7 @@ const services = [
     text: "text-teal-700",
   },
   {
+    slug: "pest-attack-prediction-advisory",
     icon: Bug,
     title: "Pest Attack Prediction & Advisory",
     desc:
@@ -53,6 +56,7 @@ const services = [
     text: "text-amber-700",
   },
   {
+    slug: "bi-weekly-farm-reports",
     icon: FileText,
     title: "Bi-Weekly Farm Reports",
     desc:
@@ -63,6 +67,7 @@ const services = [
     text: "text-blue-700",
   },
   {
+    slug: "field-visits-audits",
     icon: MapPin,
     title: "Field Visits & Audits",
     desc:
@@ -266,7 +271,7 @@ export default function ServicesPage() {
 
 function ServiceCard({ svc }) {
   return (
-    <div className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden flex flex-col">
+    <div id={svc.slug} className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden flex flex-col scroll-mt-28">
       {/* Card header accent */}
       <div className={`h-1.5 w-full bg-gradient-to-r ${svc.color}`} />
 

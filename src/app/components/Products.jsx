@@ -37,7 +37,7 @@ function Products() {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
                   <p className="text-gray-600 leading-relaxed mb-4">{product.desc}</p>
                   <Link
-                    href="/products"
+                    href="pages/Products/"
                     className="inline-flex items-center text-green-700 font-semibold hover:text-green-800 transition-colors group/link"
                   >
                     Learn more <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition-transform" />

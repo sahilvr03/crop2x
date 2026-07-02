@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Cpu,
   Satellite,
@@ -14,9 +15,17 @@ import {
   Zap,
 } from "lucide-react";
 
+import agriIot from "@/../public/assets/agri-iot.png";
+import FAAS from "@/../public/assets/faas.png";
+import Satelite from "@/../public/assets/agri.png";
+import SensorProbe from "@/../public/assets/sensor-probe.png";
+import infarm from "@/../public/infarmbox.png";
+
 const solutions = [
   {
+    slug: "sensor-iot-solutions",
     icon: Cpu,
+    image: SensorProbe,
     title: "Sensor & IoT Solutions",
     desc: "Deploy advanced sensor probes and weather trackers for real-time monitoring of soil and weather conditions.",
     features: [
@@ -29,7 +38,9 @@ const solutions = [
     stat: "24/7 Monitoring",
   },
   {
+    slug: "satellite-intelligence-ag5x",
     icon: Satellite,
+    image: Satelite,
     title: "Satellite Intelligence (Ag5X)",
     desc: "AI-powered platform delivering NDVI, crop health maps, and predictive insights.",
     features: [
@@ -42,7 +53,9 @@ const solutions = [
     stat: "Satellite Revisit: 5 days",
   },
   {
+    slug: "smart-water-management",
     icon: Droplets,
+    image: agriIot,
     title: "Smart Water Management",
     desc: "Optimize irrigation using sensor + weather data to reduce water waste.",
     features: [
@@ -55,7 +68,9 @@ const solutions = [
     stat: "Save up to 30% water",
   },
   {
+    slug: "farm-as-a-service-faas",
     icon: Leaf,
+    image: FAAS,
     title: "Farm as a Service (FaaS)",
     desc: "Complete farm management with advisory, reports, and crop recommendations.",
     features: [
@@ -68,7 +83,9 @@ const solutions = [
     stat: "Dedicated agronomist",
   },
   {
+    slug: "infarm-box",
     icon: Package,
+    image: infarm,
     title: "Infarm Box",
     desc: "Farm-to-market delivery platform connecting producers with consumers.",
     features: [
@@ -93,37 +110,30 @@ export default function SolutionsPage() {
   return (
     <>
       {/* HERO SECTION */}
-<section className="relative py-24 md:py-32 overflow-hidden">
-  {/* Background Image */}
-  <div className="absolute inset-0">
-    <img
-      src="/assets/solution.jpg" // 👈 apni image yahan lagao
-      alt="Agriculture Background"
-      className="w-full h-full object-cover"
-    />
-  </div>
-
-  {/* Overlay for readability */}
-  <div className="absolute inset-0 bg-black/50" />
-
-  {/* Content */}
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
-    <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-      <Sparkles className="w-4 h-4 text-green-300" />
-      <span className="text-sm font-medium tracking-wide">
-        End-to-End Ecosystem
-      </span>
-    </div>
-
-    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-      Complete Precision Agriculture
-    </h1>
-
-    <p className="text-lg md:text-xl text-green-100 max-w-2xl mx-auto">
-      Integrated solutions that work together seamlessly — from soil sensors to market access.
-    </p>
-  </div>
-</section>
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/assets/solution.jpg"
+            alt="Agriculture Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+            <Sparkles className="w-4 h-4 text-green-300" />
+            <span className="text-sm font-medium tracking-wide">
+              End-to-End Ecosystem
+            </span>
+          </div>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+            Complete Precision Agriculture
+          </h1>
+          <p className="text-lg md:text-xl text-green-100 max-w-2xl mx-auto">
+            Integrated solutions that work together seamlessly — from soil sensors to market access.
+          </p>
+        </div>
+      </section>
 
       {/* ECOSYSTEM STATS */}
       <section className="py-12 bg-white border-b border-gray-100">
@@ -148,19 +158,28 @@ export default function SolutionsPage() {
           {solutions.map((solution, idx) => (
             <div
               key={solution.title}
+              id={solution.slug}
               className={`flex flex-col ${
                 idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-              } gap-12 items-center group`}
+              } gap-12 items-center group scroll-mt-28`}
             >
-              {/* Visual / Icon Box */}
+              {/* Visual / Image Box */}
               <div className="lg:w-1/2">
-                <div className="relative bg-gradient-to-br from-gray-100 to-gray-50 rounded-3xl p-10 flex items-center justify-center h-80 shadow-lg group-hover:shadow-xl transition-all duration-500 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className={`w-32 h-32 rounded-3xl bg-gradient-to-br ${solution.color} text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500`}>
-                    <solution.icon className="w-16 h-16" />
+                <div className="relative rounded-3xl h-80 shadow-lg group-hover:shadow-xl transition-all duration-500 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-50">
+                  <Image
+                    src={solution.image}
+                    alt={solution.title}
+                    fill
+                    className="object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+                  />
+
+                  {/* Small icon badge, top-left */}
+                  <div className={`absolute top-4 left-4 w-12 h-12 rounded-2xl bg-gradient-to-br ${solution.color} text-white flex items-center justify-center shadow-lg z-10`}>
+                    <solution.icon className="w-6 h-6" />
                   </div>
+
                   {/* Floating stat badge */}
-                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl px-3 py-1.5 shadow-md">
+                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl px-3 py-1.5 shadow-md z-10">
                     <span className="text-xs font-semibold text-green-700">{solution.stat}</span>
                   </div>
                 </div>
@@ -183,7 +202,6 @@ export default function SolutionsPage() {
                   {solution.desc}
                 </p>
 
-                {/* Features List */}
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
                   {solution.features.map((feature) => (
                     <li
@@ -196,7 +214,6 @@ export default function SolutionsPage() {
                   ))}
                 </ul>
 
-                {/* CTA Buttons */}
                 <div className="flex flex-wrap gap-4 pt-4">
                   <Link
                     href="/pages/Products"
@@ -231,29 +248,12 @@ export default function SolutionsPage() {
               Our platform integrates sensor data, satellite imagery, and weather intelligence into one unified dashboard — giving you complete visibility and control.
             </p>
             <Link
-              href="/contact"
+              href="/pages/Contact"
               className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all hover:scale-105"
             >
               Request a Demo <ArrowRight size={16} />
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="py-16 bg-gray-900 text-white text-center">
-        <div className="container mx-auto px-4">
-          <Leaf className="w-12 h-12 text-green-400 mx-auto mb-4" />
-          <h4 className="text-2xl font-bold mb-2">Ready to transform your farm?</h4>
-          <p className="text-gray-400 mb-6 max-w-md mx-auto">
-            Let our experts help you choose the right combination of solutions.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 rounded-xl hover:bg-green-700 transition"
-          >
-            Get Started <ArrowRight size={16} />
-          </Link>
         </div>
       </section>
     </>

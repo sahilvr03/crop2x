@@ -214,7 +214,7 @@ export default function ResourcesPage() {
                       {article.title}
                     </h3>
                     <Link
-                      href="/resources/article"
+                      href="/pages/dropdownpages/blogs"
                       className="inline-flex items-center gap-2 text-green-700 font-medium text-sm group-hover:gap-3 transition-all"
                     >
                       Read More <ArrowRight size={14} />

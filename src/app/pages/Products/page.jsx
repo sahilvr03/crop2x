@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle, Sparkles, Cpu, CloudSun,CloudRain,Smartphone,D
 
 const products = [
   {
+    slug: "crop2x-sensor-probes",
     name: "AquaSave Pro",
     tagline: "Smart IoT Soil Monitoring",
     desc: "Advanced multi-parameter IoT sensor measuring soil moisture, temperature,  and EC for precision irrigation.",
@@ -15,6 +16,7 @@ const products = [
     color: "from-green-600 to-emerald-500",
   },
   {
+    slug: "ag5x",
     name: "Ag5x",
     tagline: "Satellite-Powered Crop Intelligence",
     desc: "AI-driven crop monitoring platform providing NDVI, crop health maps, stress detection, and yield predictions.",
@@ -24,6 +26,7 @@ const products = [
     color: "from-purple-600 to-indigo-500",
   },
   {
+    slug: "faas",
     name: "FaaS",
     tagline: "Farming as a Service",
     desc: "Intelligent crop advisory platform delivering actionable insights, recommendations, and alerts for better farm decisions.",
@@ -36,6 +39,7 @@ const products = [
   // NEW PRODUCTS
 
   {
+    slug: "weather-tracker",
     name: "Crop2X Weather Station",
     tagline: "Hyperlocal Climate Intelligence",
     desc: "Smart weather station providing real-time field-level data including temperature, humidity, rainfall, and wind conditions to optimize farming decisions.",
@@ -45,6 +49,7 @@ const products = [
     color: "from-sky-600 to-blue-500",
   },
   {
+    slug: "crop2x-mobile-device",
     name: "Crop2X Mobile Device",
     tagline: "Field Data in Your Hands",
     desc: "Portable smart device enabling farmers to monitor crops, capture field data, and receive instant AI-powered insights directly from the farm.",
@@ -54,6 +59,7 @@ const products = [
     color: "from-indigo-600 to-blue-400",
   },
   {
+    slug: "infarm-box",
     name: "Crop2X Drone Imagery",
     tagline: "Precision Aerial Crop Monitoring",
     desc: "High-resolution drone imaging services delivering detailed crop health analysis, stress mapping, and field variability insights.",
@@ -130,9 +136,10 @@ export default function ProductsPage() {
           {products.map((product, idx) => (
             <div
               key={product.name}
+              id={product.slug}
               className={`flex flex-col ${
                 idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-              } gap-12 items-center group`}
+              } gap-12 items-center group scroll-mt-28`}
             >
               {/* Image Container */}
               <div className="lg:w-1/2">
@@ -184,13 +191,13 @@ export default function ProductsPage() {
                 {/* CTA Buttons */}
                 {/* <div className="flex flex-wrap gap-4 pt-4">
                   <Link
-                    href="/contact"
+                    href="/pages/Contact"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
                   >
                     Request Info <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
-                    href="/solutions"
+                    href="/pages/Solutions"
                     className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium hover:border-green-500 hover:text-green-700 hover:bg-green-50 transition-all duration-300"
                   >
                     View Use Cases
@@ -208,7 +215,7 @@ export default function ProductsPage() {
           <h4 className="text-xl font-medium mb-2">Ready to transform your farm?</h4>
           <p className="text-gray-400 mb-6">Join hundreds of farmers using Crop2X to increase yield and save resources.</p>
           <Link
-            href="/contact"
+            href="/pages/Contact"
             className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 rounded-xl hover:bg-green-700 transition"
           >
             Get Started <ArrowRight size={16} />

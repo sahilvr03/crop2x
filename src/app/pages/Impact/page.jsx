@@ -270,13 +270,13 @@ export default function ImpactPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/contact"
+              href="/pages/Contact"
               className="inline-flex items-center gap-2 px-8 py-3 bg-white text-green-800 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               Schedule a Visit <ArrowRight size={18} />
             </Link>
             <Link
-              href="/contact"
+              href="/pages/Contact"
               className="inline-flex items-center gap-2 px-8 py-3 bg-transparent border-2 border-white text-white rounded-xl font-bold hover:bg-white/10 transition-all"
             >
               Request Demo
